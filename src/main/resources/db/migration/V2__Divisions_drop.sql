@@ -1,0 +1,2 @@
+-- alter table divisions
+-- drop column age;
