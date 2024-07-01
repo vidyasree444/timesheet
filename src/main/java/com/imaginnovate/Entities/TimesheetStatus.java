@@ -21,8 +21,6 @@ public class TimesheetStatus extends BaseClass{
     @Column(name = "name", nullable = false, length = 10)
     public String name;
 
-  
-
     public TimesheetStatus() {
     }
 

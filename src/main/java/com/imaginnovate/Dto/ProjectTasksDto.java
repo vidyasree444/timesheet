@@ -4,13 +4,21 @@ import java.time.LocalDateTime;
 
 public class ProjectTasksDto {
     private Integer id;
+
     private Integer project;
+
     private Integer task;
+
     private Integer createdBy;
+
     private LocalDateTime created_On;
+
     private Integer modifiedBy;
+
     private LocalDateTime modifiedOn;
+
     private Integer deletedBy;
+    
     private LocalDateTime deletedOn;
 
     public ProjectTasksDto() {

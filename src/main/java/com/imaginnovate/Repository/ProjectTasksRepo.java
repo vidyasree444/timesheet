@@ -10,7 +10,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class ProjectTasksRepo implements PanacheRepositoryBase<ProjectTasks,Integer> {
-        public List<ProjectTasksDto> findAllProjects() {
+    public List<ProjectTasksDto> findAllProjects() {
         return getEntityManager().createQuery(
             "SELECT new com.imaginnovate.Dto.ProjectTasksDto(pt.id, pt.project.id, pt.task.id, pt.createdBy, pt.created_On, pt.modifiedBy, pt.modifiedOn, pt.deletedBy, pt.deletedOn) FROM ProjectTasks pt",
             ProjectTasksDto.class)

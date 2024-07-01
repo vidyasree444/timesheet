@@ -2,16 +2,24 @@ package com.imaginnovate.Dto;
 
 import java.time.LocalDateTime;
 public class DivisionsDto {
- 
-    public Integer id;           
-    public String name;
-    public Integer parentId;
-    public Integer createdBy;   
-    public LocalDateTime createdOn;
-    public Integer modifiedBy;
-    public LocalDateTime modifiedOn;
-    public Integer deletedBy;
-    public LocalDateTime deletedOn;
+    
+    private Integer id;
+
+    private String name;
+
+    private Integer parentId;
+
+    private Integer createdBy;
+
+    private LocalDateTime createdOn;
+
+    private Integer modifiedBy;
+
+    private LocalDateTime modifiedOn;
+
+    private Integer deletedBy;
+
+    private LocalDateTime deletedOn;
 
     public DivisionsDto(Integer id, String name, Integer parentId, Integer createdBy, LocalDateTime createdOn, Integer modifiedBy, LocalDateTime modifiedOn, Integer deletedBy, LocalDateTime deletedOn) {
         this.id = id;

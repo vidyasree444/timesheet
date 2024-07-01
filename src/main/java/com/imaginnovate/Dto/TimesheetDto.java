@@ -12,13 +12,13 @@ public class TimesheetDto {
 
     private String description;
 
-    private Short hoursWorked;
+    private Short hoursWorked; 
 
     private Integer submittedBy;
 
     private LocalDateTime submittedOn;
 
-    private Byte status;
+    private byte status;
 
     private Integer approvedBy;
 
@@ -37,10 +37,8 @@ public class TimesheetDto {
     public TimesheetDto() {
     }
 
-  
 
-
-    public TimesheetDto(Integer id, Integer employeeProject, Integer projectTask, String description, Short hoursWorked, Integer submittedBy, LocalDateTime submittedOn, Byte status, Integer approvedBy, Integer createdBy, LocalDateTime created_On, Integer modifiedBy, LocalDateTime modifiedOn, Integer deletedBy, LocalDateTime deletedOn) {
+    public TimesheetDto(Integer id, Integer employeeProject, Integer projectTask, String description, Short hoursWorked, Integer submittedBy, LocalDateTime submittedOn, byte status, Integer approvedBy, Integer createdBy, LocalDateTime created_On, Integer modifiedBy, LocalDateTime modifiedOn, Integer deletedBy, LocalDateTime deletedOn) {
         this.id = id;
         this.employeeProject = employeeProject;
         this.projectTask = projectTask;
@@ -115,12 +113,12 @@ public class TimesheetDto {
         this.submittedOn = submittedOn;
     }
 
-    public Byte getStatus() {
+    public byte getStatus() {
         return this.status;
     }
 
-    public void setStatus(Byte byte1) {
-        this.status = byte1;
+    public void setStatus(byte status) {
+        this.status = status;
     }
 
     public Integer getApprovedBy() {

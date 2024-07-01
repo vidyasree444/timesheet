@@ -13,16 +13,13 @@ import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class TaskService {
-     @Inject
+    @Inject
     TasksRepo tasksRepo;
 
     public List<TaskDto> getAllTasks() {
-     return tasksRepo.findAllTasks();
-    }
-
-    
-
-
+        List<TaskDto> results = tasksRepo.findAllTasks();
+        return results;
+}
 
     public TaskDto getTaskById(int id) {
         Tasks e=tasksRepo.findById(id);
@@ -43,9 +40,9 @@ public class TaskService {
             }
             dto.setModifiedOn(e.modifiedOn);
             return dto;
-           
+
         }
-    }
-   
+        
+}
     
 

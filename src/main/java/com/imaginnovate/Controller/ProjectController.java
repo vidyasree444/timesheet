@@ -21,6 +21,7 @@ public class ProjectController {
 
     @GET
     @Path("/getall")
+    
     public List<ProjectDto> getallprojects() {
         List<ProjectDto> results = projectsService.getAllProjects();
         return results;
@@ -39,11 +40,9 @@ public class ProjectController {
     public Response getById(@PathParam("id") int id) {
         ProjectDto dto = projectsService.getProjectById(id);
         if (dto == null) {
-            return Response.status(Response.Status.NOT_FOUND)
-                           .entity("Project not found for ID: " + id)
-                           .build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Project not found for ID: " + id).build();
         }
         return Response.ok(dto).build();
     }
-    }
+}
 

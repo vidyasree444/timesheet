@@ -21,7 +21,7 @@ public class Projects extends BaseClass {
     private int id;
 
     @Column(name = "name", nullable = false, unique = true, length = 50)
-     public String name;
+    public String name;
 
     @Column(name = "description", length = 200)
     public String description;

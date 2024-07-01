@@ -5,20 +5,35 @@ import java.time.LocalDateTime;
 
 public class EmployeeDto {
     private Integer id;
+
     private String firstName;
+
     private String lastName;
+
     private Character gender;
+
     private String email;
+
     private String designation;
+
     private LocalDate startDate;
+
     private LocalDate endDate;
+
     private Integer divisionId;
+
     private Integer reportsToId;
+
     private Integer createdBy;
+
     private LocalDateTime created_On;
+
     private Integer modifiedBy;
+
     private LocalDateTime modifiedOn;
+
     private Integer deletedBy;
+    
     private LocalDateTime deletedOn;
 
     public EmployeeDto() {

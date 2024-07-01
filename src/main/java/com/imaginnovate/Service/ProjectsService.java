@@ -23,9 +23,9 @@ public class ProjectsService {
     DivisionsRepo divisionsRepo;
 
     public List<ProjectDto> getAllProjects() {
-        return projectsRepo.findAllProjects();
+        List<ProjectDto> results = projectsRepo.findAllProjects();
+        return results;
     }
-   
 
     @Transactional
     public Projects createProject(ProjectDto projectDto) {
@@ -61,15 +61,16 @@ public class ProjectsService {
             projectDto.setDivision(projects.division.getId());
         }
         projectDto.setCreatedBy(projects.createdBy);
-           projectDto.setCreated_On(projects.created_On);
+        projectDto.setCreated_On(projects.created_On);
             if (projects.deletedBy != null) {
                 projectDto.setDeletedBy(projects.deletedBy);
             }
             projectDto.setDeletedOn(projects.deletedOn);
             if (projects.modifiedBy != null) {
-               projectDto.setModifiedBy(projects.modifiedBy);
+                projectDto.setModifiedBy(projects.modifiedBy);
             }
             projectDto.setModifiedOn(projects.modifiedOn);
         return projectDto;
     }
+    
 }

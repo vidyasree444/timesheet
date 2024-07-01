@@ -20,7 +20,7 @@ public class Employees extends BaseClass {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private int id;
+    private int id;
 
     @Column(name = "first_name", nullable = false, length = 40)
     public String firstName;
@@ -86,7 +86,6 @@ public class Employees extends BaseClass {
                 + ", startDate=" + startDate + ", endDate=" + endDate + ", division=" + division + ", reports_to="
                 + reports_to + "]";
     }
-  
 }
 
 

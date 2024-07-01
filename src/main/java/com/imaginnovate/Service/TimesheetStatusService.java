@@ -40,7 +40,7 @@ public class TimesheetStatusService {
     }
 
 
-    public TimesheetStatusDto getTimesheetStatusById(int id) {
+    public TimesheetStatusDto getTimesheetStatusById(Byte id) {
         TimesheetStatus e= timesheetStatusRepo.findById(id);
         if (e == null) {
             return null;

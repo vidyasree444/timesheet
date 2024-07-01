@@ -37,10 +37,6 @@ public class EmployeeDivisions extends BaseClass {
     public EmployeeDivisions() {
     }
 
-    
-
-    
-
     public EmployeeDivisions(int id, Employees employee, Divisions division, boolean canApproveTimesheets) {
         this.id = id;
         this.employee = employee;
@@ -48,31 +44,17 @@ public class EmployeeDivisions extends BaseClass {
         this.canApproveTimesheets = canApproveTimesheets;
     }
 
-
     public int getId() {
         return id;
     }
 
-
-
-
-
     public void setId(int id) {
         this.id = id;
     }
-
-
-
-
 
     @Override
     public String toString() {
         return "EmployeeDivisions [id=" + id + ", employee=" + employee + ", division=" + division
                 + ", canApproveTimesheets=" + canApproveTimesheets + "]";
     }
-
-    
-
-   
-
 }

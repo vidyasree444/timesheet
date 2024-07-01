@@ -2,21 +2,34 @@ package com.imaginnovate.Dto;
 
 import java.time.LocalDateTime;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class EmployeeProjectsDto {
     
     private Integer id;
+
     private Integer employee;
+
     private Integer project;
+
     private Boolean canApproveTimesheets;
+
     private Integer createdBy;
+
     private LocalDateTime created_On;
+
     private Integer modifiedBy;
+
     private LocalDateTime modifiedOn;
+
     private Integer deletedBy;
+    
     private LocalDateTime deletedOn;
 
     public EmployeeProjectsDto() {
-     }
+        
+    }
 
 
     public EmployeeProjectsDto(Integer id, Integer employee, Integer project, Boolean canApproveTimesheets, Integer createdBy, LocalDateTime created_On, Integer modifiedBy, LocalDateTime modifiedOn, Integer deletedBy, LocalDateTime deletedOn) {
@@ -40,7 +53,7 @@ public class EmployeeProjectsDto {
         this.id = id;
     }
 
-    public Integer getEmployee() {
+    public int getEmployee() {
         return this.employee;
     }
 

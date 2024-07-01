@@ -18,7 +18,8 @@ public class EmployeeDivisionService {
     @Inject
     EmployeeDivisionsRepo employeeDivisionsRepo;
     public List<EmployeeDivisionsDto> findAllEmployeeDivisions() {
-        return employeeDivisionsRepo.findAllEmployeeDivisions();
+        List<EmployeeDivisionsDto> results = employeeDivisionsRepo.findAllEmployeeDivisions();
+        return results;
     }
 
     @Transactional

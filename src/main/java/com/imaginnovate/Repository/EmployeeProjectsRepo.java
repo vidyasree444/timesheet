@@ -11,8 +11,6 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class EmployeeProjectsRepo implements PanacheRepositoryBase<EmployeeProjects,Integer> {
-   
-   
     public List<EmployeeProjectsDto> findAllEmployeeProjects() {
         return getEntityManager().createQuery(
                 "SELECT new com.imaginnovate.Dto.EmployeeProjectsDto(ep.id, ep.employee.id, ep.project.id, ep.canApproveTimesheets, ep.createdBy, ep.created_On, ep.modifiedBy, ep.modifiedOn, ep.deletedBy, ep.deletedOn) FROM EmployeeProjects ep",

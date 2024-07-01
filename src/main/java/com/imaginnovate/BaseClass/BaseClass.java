@@ -9,12 +9,11 @@ import jakarta.persistence.MappedSuperclass;
 @MappedSuperclass
 public class BaseClass extends PanacheEntityBase {
 
-    @Column(name = "created_by", nullable = false)
     public int createdBy;
 
     @Column(name = "created_on")
     public LocalDateTime created_On;
-   
+
     @Column(name = "modified_by")
     public Integer modifiedBy;
 

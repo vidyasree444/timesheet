@@ -23,7 +23,8 @@ public class EmployeeService {
 
     
     public List<EmployeeDto> getAllEmployees() {
-        return employeesRepository.findAllProjections();
+        List<EmployeeDto> results =  employeesRepository.findAllProjections();
+        return results;
     }
 
     @Transactional
@@ -91,5 +92,9 @@ public class EmployeeService {
         dto.setModifiedOn(employees.modifiedOn);
         return dto;
     }
+
 }
+
+
+
 

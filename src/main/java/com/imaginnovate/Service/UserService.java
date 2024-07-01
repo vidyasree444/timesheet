@@ -1,6 +1,6 @@
 package com.imaginnovate.Service;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import com.imaginnovate.Dto.UsersDto;
@@ -17,30 +17,11 @@ public class UserService {
     @Inject
     UsersRepo usersRepo;
     public List<UsersDto> getAllUsers() {
-        List<Users> users = Users.listAll();
-        List<UsersDto> usersDtos = new ArrayList<>();
-        for (Users u : users) {
-            UsersDto dto = new UsersDto();
-            dto.setId(u.getId());
-            dto.setUsername(u.username);
-            dto.setPassword(u.password);
-            dto.setEmployeeId(u.employeeId.getId());
-            dto.setResetToken(u.resetToken);
-            dto.setResetTokenExpiresAt(u.resetTokenExpiresAt);
-            dto.setCreatedBy(u.createdBy);
-            dto.setCreated_On(u.created_On);
-            if (u.deletedBy != null) {
-                dto.setDeletedBy(u.deletedBy);
-            }
-            dto.setDeletedOn(u.deletedOn);
-            if (u.modifiedBy != null) {
-                dto.setModifiedBy(u.modifiedBy);
-            }
-            dto.setModifiedOn(u.modifiedOn);
-            usersDtos.add(dto);
-        }
-        return usersDtos;
+        List<UsersDto> results = usersRepo.findAllUsers();
+        return results;
     }
+
+
     @Transactional
     public Users addUser(UsersDto usersDto) {
         Users users = new Users();
@@ -60,6 +41,7 @@ public class UserService {
         users.persist();
         return users;
     }
+
 
 
     public UsersDto getUserById(int id) {

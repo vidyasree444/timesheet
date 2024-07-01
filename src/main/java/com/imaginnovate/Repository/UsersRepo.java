@@ -10,8 +10,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class UsersRepo implements PanacheRepositoryBase<Users,Integer>{
-    
-       public List<UsersDto> findAllUsers() {
+    public List<UsersDto> findAllUsers() {
         return getEntityManager().createQuery(
             "SELECT new com.imaginnovate.dto.UsersDto(u.id, u.employee.id, u.username, u.password, u.resetToken, u.resetTokenExpiresAt, u.createdBy, u.createdOn, u.modifiedBy, u.modifiedOn, u.deletedBy, u.deletedOn) FROM Users u",
             UsersDto.class)

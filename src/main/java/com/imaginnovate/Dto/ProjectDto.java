@@ -5,14 +5,23 @@ import java.time.LocalDateTime;
 public class ProjectDto {
 
     private Integer id;
+
     private String name;
+
     private String description;
+
     private Integer division;
+
     private Integer createdBy;
+
     private LocalDateTime created_On;
+
     private Integer modifiedBy;
+
     private LocalDateTime modifiedOn;
+
     private Integer deletedBy;
+    
     private LocalDateTime deletedOn;
 
     public ProjectDto() {

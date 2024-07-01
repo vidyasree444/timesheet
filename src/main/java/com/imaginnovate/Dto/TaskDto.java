@@ -4,19 +4,25 @@ import java.time.LocalDateTime;
 
 public class TaskDto {
     private Integer id;
+
     private String name;
+
     private String description;
+
     private Integer createdBy;
+
     private LocalDateTime created_On;
+
     private Integer modifiedBy;
+
     private LocalDateTime modifiedOn;
+
     private Integer deletedBy;
+    
     private LocalDateTime deletedOn;
 
     public TaskDto() {
     }
-
-   
 
 
     public TaskDto(Integer id, String name, String description, Integer createdBy, LocalDateTime created_On, Integer modifiedBy, LocalDateTime modifiedOn, Integer deletedBy, LocalDateTime deletedOn) {

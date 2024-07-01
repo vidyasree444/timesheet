@@ -23,32 +23,32 @@ public class Timesheets extends BaseClass {
 
     @ManyToOne
     @JoinColumn(name = "employee_project_id", nullable = false)
-    private EmployeeProjects employeeProject;
+    public EmployeeProjects employeeProject;
 
     @ManyToOne
     @JoinColumn(name = "project_task_id", nullable = false)
-    private ProjectTasks projectTask;
+    public ProjectTasks projectTask;
 
     @Column(name = "description", length = 100)
-    private String description;
+    public String description;
 
     @Column(name = "hours_worked", nullable = false)
-    private Short hoursWorked;
+    public Short hoursWorked;
 
     @ManyToOne
     @JoinColumn(name = "submitted_by", nullable = false)
-    private Employees submittedBy;
+    public Employees submittedBy;
 
     @Column(name = "submitted_on", nullable = false)
-    private LocalDateTime submittedOn;
+    public LocalDateTime submittedOn;
 
     @ManyToOne
     @JoinColumn(name = "status", nullable = false)
-    private TimesheetStatus status;
+    public TimesheetStatus status;
 
     @ManyToOne
     @JoinColumn(name = "approved_by")
-    private Employees approvedBy;
+    public Employees approvedBy;
 
     
 
@@ -77,70 +77,6 @@ public class Timesheets extends BaseClass {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public EmployeeProjects getEmployeeProject() {
-        return employeeProject;
-    }
-
-    public void setEmployeeProject(EmployeeProjects employeeProject) {
-        this.employeeProject = employeeProject;
-    }
-
-    public ProjectTasks getProjectTask() {
-        return projectTask;
-    }
-
-    public void setProjectTask(ProjectTasks projectTask) {
-        this.projectTask = projectTask;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Short getHoursWorked() {
-        return hoursWorked;
-    }
-
-    public void setHoursWorked(Short hoursWorked) {
-        this.hoursWorked = hoursWorked;
-    }
-
-    public Employees getSubmittedBy() {
-        return submittedBy;
-    }
-
-    public void setSubmittedBy(Employees submittedBy) {
-        this.submittedBy = submittedBy;
-    }
-
-    public LocalDateTime getSubmittedOn() {
-        return submittedOn;
-    }
-
-    public void setSubmittedOn(LocalDateTime submittedOn) {
-        this.submittedOn = submittedOn;
-    }
-
-    public TimesheetStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(TimesheetStatus status) {
-        this.status = status;
-    }
-
-    public Employees getApprovedBy() {
-        return approvedBy;
-    }
-
-    public void setApprovedBy(Employees approvedBy) {
-        this.approvedBy = approvedBy;
     }
 
     @Override

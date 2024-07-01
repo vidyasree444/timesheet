@@ -19,7 +19,8 @@ public class EmployeeProjectsService {
     EmployeeProjectsRepo employeeProjectsRepo;
 
     public List<EmployeeProjectsDto> findAllEmployeeProjects() {
-        return employeeProjectsRepo.findAllEmployeeProjects();
+        List<EmployeeProjectsDto> results = findAllEmployeeProjects();
+        return results;
     }
 
     @Transactional
@@ -28,7 +29,7 @@ public class EmployeeProjectsService {
 
         employeeProjects.setId(employeeProjectsDto.getId());
         if (employeeProjectsDto.getEmployee() != 0) {
-           Employees employees = Employees.findById(employeeProjectsDto.getEmployee());
+            Employees employees = Employees.findById(employeeProjectsDto.getEmployee());
             if (employees !=null) {
                 employeeProjects.employee = employees;
             }else {
@@ -36,8 +37,9 @@ public class EmployeeProjectsService {
             }
         }
 
+
         if (employeeProjectsDto.getProject() != 0) {
-           Projects projects = Projects.findById(employeeProjectsDto.getProject());
+            Projects projects = Projects.findById(employeeProjectsDto.getProject());
             if (projects !=null) {
                 employeeProjects.project = projects;
             }else {

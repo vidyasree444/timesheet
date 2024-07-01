@@ -1,7 +1,6 @@
 package com.imaginnovate.Service;
 
 import java.util.List;
-
 import com.imaginnovate.Dto.DivisionsDto;
 import com.imaginnovate.Entities.Divisions;
 import com.imaginnovate.Repository.DivisionsRepo;
@@ -9,6 +8,8 @@ import com.imaginnovate.Repository.DivisionsRepo;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
+
+
 
 @ApplicationScoped
 @Transactional
@@ -24,7 +25,7 @@ public class DivisionService {
         return results;
     }
 
-     @Transactional
+    @Transactional
     public DivisionsDto createDivision(DivisionsDto divisionsDto) {
         Divisions division = new Divisions();
         division.name = divisionsDto.getName();

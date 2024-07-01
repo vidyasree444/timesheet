@@ -17,6 +17,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+
 @Path("/project-task")
 public class ProjectTaskController {
     
@@ -47,11 +48,14 @@ public class ProjectTaskController {
     public Response getById(@PathParam("id") int id) {
         ProjectTasksDto dto = projectTasksService.getProjectTaskById(id);
         if (dto == null) {
-            return Response.status(Response.Status.NOT_FOUND)
-                           .entity("Project task not found for ID: " + id)
-                           .build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Project task not found for ID: " + id).build();
         }
         return Response.ok(dto).build();
     }
-    }
+
+
+    
+
+
+}
 

@@ -4,22 +4,28 @@ import java.time.LocalDateTime;
 
 public class EmployeeDivisionsDto {
     private Integer id;
+
     private Integer employeeId;
+
     private Integer divisionId;
+
     private boolean canApproveTimesheets;
-      private Integer createdBy;
+
+    private Integer createdBy;
+
     private LocalDateTime created_On;
+
     private Integer modifiedBy;
+
     private LocalDateTime modifiedOn;
+
     private Integer deletedBy;
+    
     private LocalDateTime deletedOn;
     
 
     public EmployeeDivisionsDto() {
     }
-
-    
-   
 
 
 

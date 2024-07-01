@@ -24,7 +24,7 @@ public class ProjectTasks extends BaseClass{
 
     @ManyToOne
     @JoinColumn(name = "project_id", nullable = false)
-   public Projects project;
+    public Projects project;
 
     @ManyToOne
     @JoinColumn(name = "task_id", nullable = false)

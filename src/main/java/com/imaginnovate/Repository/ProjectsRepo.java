@@ -11,7 +11,6 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class ProjectsRepo implements PanacheRepositoryBase<Projects,Integer> {
-    
     public List<ProjectDto> findAllProjects() {
         return getEntityManager().createQuery(
             "SELECT new com.imaginnovate.Dto.ProjectDto(p.id, p.name, p.description, p.division.id, p.createdBy, p.created_On, p.modifiedBy, p.modifiedOn, p.deletedBy, p.deletedOn) FROM Projects p",
@@ -19,4 +18,5 @@ public class ProjectsRepo implements PanacheRepositoryBase<Projects,Integer> {
             .getResultList();
     }
 }
+
 

@@ -1,8 +1,6 @@
 package com.imaginnovate.Service;
 
-
 import java.util.List;
-
 import com.imaginnovate.Dto.ProjectTasksDto;
 import com.imaginnovate.Entities.ProjectTasks;
 import com.imaginnovate.Entities.Projects;
@@ -27,7 +25,8 @@ public class ProjectTasksService {
     TasksRepo tasksRepo;
 
     public List<ProjectTasksDto> getAllProjectTasks() {
-        return  projectTasksRepo.findAllProjects();
+        List<ProjectTasksDto> results = projectTasksRepo.findAllProjects();
+        return results;
     }
 
     @Transactional
